@@ -13,7 +13,8 @@ function getValueByKey(object, row) {
 }
 
 function currencyConverter(toCurrency, amount) {
-    let exchangeRate = getValueByKey(exchange_rate, toCurrency);
+    console.log({toCurrency, amount})
+    let exchangeRate = getValueByKey(exchange_rate, toCurrency.toUpperCase());
     var convertedAmount = amount * exchangeRate;
     document.getElementById("displayConvertedAmount").innerHTML = "Converted Currency " + convertedAmount;
     return convertedAmount + ` ${toCurrency}`;
