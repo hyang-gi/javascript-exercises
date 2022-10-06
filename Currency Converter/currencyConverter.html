@@ -8,29 +8,32 @@
 
 <body>
     <h1>Welcome to the Currency Converter!</h1>
-    <input type="text" placeholder="Enter amount" id="amount"><br><br>
-    <label for="fromCurrency">From</label>
-    <select name="fromCurrency" id="fromCurrency" value="eur">
-        <option value="gbp">GBP</option>
-        <option value="inr">INR</option>
-        <option value="usd">USD</option>
-        <option value="yen">YEN</option>
-        <option value="eur" selected>EUR</option>
-    </select>
+    <form>
+        <input type="number" placeholder="Enter amount" id="amount"><br><br>
+        <label for="fromCurrency">From</label>
+        <select name="fromCurrency" id="fromCurrency" value="eur">
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+            <option value="USD">USD</option>
+            <option value="YEN">YEN</option>
+            <option value="EUR" selected>EUR</option>
+        </select>
 
-    <label for="toCurrency">To</label>
-    <select name="toCurrency" id="toCurrency">
-        <option value="gbp">GBP</option>
-        <option value="inr">INR</option>
-        <option value="usd">USD</option>
-        <option value="yen">YEN</option>
-        <option value="eur">EUR</option>
-    </select>
+        <label for="toCurrency">To</label>
+        <select name="toCurrency" id="toCurrency">
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+            <option value="USD">USD</option>
+            <option value="YEN">YEN</option>
+            <option value="EUR">EUR</option>
+        </select>
 
-    <br> <br>
-    <button type="button" onclick="currencyConverter(document.getElementById('toCurrency').value, document.getElementById('amount').value)">Convert</button>
-    <p id="displayExchangeRate"></p>
-    <p id="displayConvertedAmount"></p>
+        <br> <br>
+        <button type="button"
+            onclick="currencyConverter(document.getElementById('fromCurrency').value, document.getElementById('toCurrency').value, document.getElementById('amount').value)">Convert</button>
+        <p id="displayExchangeRate"></p>
+        <p id="displayConvertedAmount"></p>
+    </form>
 
     <script src="currencyConverter.js"></script>
 </body>

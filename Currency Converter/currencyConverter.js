@@ -1,4 +1,4 @@
-const exchange_rate = {
+const currency = {
     "EUR": 1,
     "INR": 79.89,
     "USD": 0.98,
@@ -6,15 +6,8 @@ const exchange_rate = {
     "GBP": 0.87,
 }
 
-function getValueByKey(object, row) {
-    console.log("Exchange Rate", object[row]);
-    document.getElementById("displayExchangeRate").innerHTML = "Exchange Rate " + object[row];
-    return object[row];
-}
-
-function currencyConverter(toCurrency, amount) {
-    console.log({toCurrency, amount})
-    let exchangeRate = getValueByKey(exchange_rate, toCurrency.toUpperCase());
+function currencyConverter(fromCurrency, toCurrency, amount) {
+    let exchangeRate = currency[toCurrency] / currency[fromCurrency];
     var convertedAmount = amount * exchangeRate;
     document.getElementById("displayConvertedAmount").innerHTML = "Converted Currency " + convertedAmount;
     return convertedAmount + ` ${toCurrency}`;
