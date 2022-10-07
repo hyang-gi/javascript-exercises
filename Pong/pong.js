@@ -1,12 +1,15 @@
 $(document).ready(function () {
-    document.addEventListener('keyup', function() {
-		$('.paddle').animate({
-		'top' : "+=5px" //moves down
-		});
-	});
-	document.addEventListener('keydown', function() {
-		$('.paddle').animate({
-		'top' : "-=5px" //moves up
-		});
+	
+	$(document).keyup(function (event) {
+		if (event.keyCode == 38) {
+			$('.paddle').animate({
+				'top': "-=15px" //moves up
+			}, "fast");
+		}
+		if (event.keyCode == 40) {
+			$('.paddle').animate({
+				'top': "+=15px" //moves up
+			}, "fast");
+		}
 	});
 })

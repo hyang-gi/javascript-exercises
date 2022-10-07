@@ -1,12 +1,15 @@
 .main{
 	width: 600px;
-	height: 400px;
+	height: 600px;
 	background: rgb(0,0,0);
+	position: relative;
 }
 
 .paddle{
 	background: rgb(255,255,255);
 	width: 20px;
-	height: 80px;
+	height: 120px;
 	position: relative;
+	left: 10px;
+	top: 10px;
 }
