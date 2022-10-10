@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+	
 	
 	$(document).keyup(function (event) {
 		if (event.keyCode == 38) {
@@ -10,6 +12,7 @@ $(document).ready(function () {
 			$('.paddle').animate({
 				'top': "+=15px" //moves up
 			}, "fast");
+
 		}
 	});
 })

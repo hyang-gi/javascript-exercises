@@ -2,14 +2,26 @@
 	width: 600px;
 	height: 600px;
 	background: rgb(0,0,0);
-	position: relative;
 }
 
 .paddle{
 	background: rgb(255,255,255);
 	width: 20px;
 	height: 120px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.ball{
+	background: rgb(255,255,255);;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
 	position: relative;
-	left: 10px;
+	left: 550px;
 	top: 10px;
+}
+#start {
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
