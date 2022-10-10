@@ -1,4 +1,4 @@
-###Game Rules:
+### Game Rules:
 
 1. Build a game where you have to bounce a ball with a 'paddle'
 2. You start with 10 points
