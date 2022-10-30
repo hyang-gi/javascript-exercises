@@ -4,12 +4,20 @@ $(document).ready(function () {
         url: "mock_data.json",
         success: function (data) {
             console.log({ data });
-            sortedHighScores(data);
-            changeContent(data);
+            displayTable(data);
+            //sortedHighScores(data);
+            // changeContent(data);
         }
     })
 });
 
+function displayTable(data) {
+    scores = data.map(score => score.high_score);
+    names = data.map(name => name.first_name + " " + name.last_name);
+    console.log({ names, scores });
+    const table = document.getElementById("tableValues");
+    table.innerHTML = data.map(value => `<tr><td>${value.first_name} ${value.last_name}</td><td>${value.high_score}</td></tr>`).join("")
+}
 function sortedHighScores(data) {
     var highscores, sortedValues = [];
     // using for loop
