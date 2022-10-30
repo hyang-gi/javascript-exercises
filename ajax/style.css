@@ -11,3 +11,13 @@ td {
     border-collapse: collapse;
     padding: 8px;
 }
+
+/* .order-inactive span {
+    visibility:hidden;
+}
+.order-inactive:hover span {
+    visibility:visible;
+}
+.order-active span {
+    visibility: visible;
+} */
