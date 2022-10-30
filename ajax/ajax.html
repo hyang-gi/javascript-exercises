@@ -6,14 +6,28 @@
     <title>Ajax Exercise</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="ajax.js"></script>
+    <script type="text/javascript" src="dynamic.js"></script>
 </head>
 
 <body>
     <h1>Highscores Table</h1>
-    <table id="tableValues">
+    <!-- commenting ajax.js table fetching
+        <table id="tableValues">
     </table>
-    <ul id="sorted"></ul>
+    <ul id="sorted"></ul> -->
+
+    <div id="data-table">
+        <table id="html-data-table">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Highscore</th>
+            </tr>
+        </table>    
+    </div>
 </body>
 
 </html>
