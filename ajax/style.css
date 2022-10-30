@@ -10,9 +10,17 @@ td {
     border: 1px solid;
     border-collapse: collapse;
     padding: 8px;
+    text-align: center;
 }
 th {
     cursor: pointer;
+}
+#data-table, h1 {
+    display: flex;
+    justify-content: center;
+}
+body {
+    background-color: beige;
 }
 /* .order-inactive span {
     visibility:hidden;
