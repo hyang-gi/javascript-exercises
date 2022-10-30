@@ -15,11 +15,13 @@ $(document).ready(function () {
         }
     });
 
+    var order = "asc";
     headerName.addEventListener('click', (e) => {
         console.log("name button click!")
-        const sorted = newData.sort((a, b) => a.name.localeCompare(b.name));
+        const sorted = order == "asc" ? newData.sort((a, b) => a.name.localeCompare(b.name)) : newData.sort((a, b) => b.name.localeCompare(a.name));
         //console.log(sorted);
         renderDataInTheTable(sorted);
+        order = "dsc";
     })
 
 
