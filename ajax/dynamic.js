@@ -1,22 +1,48 @@
-$(document).ready(function() { 
+$(document).ready(function () {
     console.log("works!");
+    var newData = [];
+    const mytable = document.querySelector("#html-data-table tbody");
+    const btnSortName = document.getElementById("sortName");
+    const btnSortScore = document.getElementById("sortScore");
+
     $.ajax({
         url: "mock_data.json",
-        success: function(data) {
+        success: function (data) {
             //console.log(data);
-            renderDataInTheTable(data);
+            newData = getData(data);
+            //console.log(newData);
+            renderDataInTheTable(newData);
         }
     });
 
-    function renderDataInTheTable(data) {
-        const mytable = document.getElementById("html-data-table");
-        var newData = data.map(function (item) {
+    btnSortName.addEventListener('click', (e) => {
+        console.log("name button click!")
+        const sorted = newData.sort((a, b) => a.name.localeCompare(b.name));
+        //console.log(sorted);
+        renderDataInTheTable(sorted);
+    })
+
+
+    btnSortScore.addEventListener('click', (e) => {
+        console.log("score button click!")
+        const sorted = newData.sort((a, b) => a.high_score - b.high_score);
+        //console.log(sorted);
+        renderDataInTheTable(sorted)
+    })
+
+    function getData(data) {
+        const newData = data.map(function (item) {
             return {
                 name: `${item.first_name} ${item.last_name}`,
                 high_score: item.high_score,
             }
         });
-        newData.map(row => {
+        return newData;
+    }
+
+    function renderDataInTheTable(data) {
+        mytable.innerHTML = '';
+        data.map(row => {
             let newRow = document.createElement("tr"); // new row is created
             Object.values(row).map((value) => {
                 //console.log(value);
