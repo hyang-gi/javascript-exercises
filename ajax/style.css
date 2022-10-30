@@ -11,12 +11,9 @@ td {
     border-collapse: collapse;
     padding: 8px;
 }
-
-button {
-    padding: 4px;
-    margin-bottom: 8px;
+th {
+    cursor: pointer;
 }
-
 /* .order-inactive span {
     visibility:hidden;
 }

@@ -2,8 +2,8 @@ $(document).ready(function () {
     console.log("works!");
     var newData = [];
     const mytable = document.querySelector("#html-data-table tbody");
-    const btnSortName = document.getElementById("sortName");
-    const btnSortScore = document.getElementById("sortScore");
+    const headerName = document.getElementById("name");
+    const headerScore = document.getElementById("highscore");
 
     $.ajax({
         url: "mock_data.json",
@@ -15,7 +15,7 @@ $(document).ready(function () {
         }
     });
 
-    btnSortName.addEventListener('click', (e) => {
+    headerName.addEventListener('click', (e) => {
         console.log("name button click!")
         const sorted = newData.sort((a, b) => a.name.localeCompare(b.name));
         //console.log(sorted);
@@ -23,7 +23,7 @@ $(document).ready(function () {
     })
 
 
-    btnSortScore.addEventListener('click', (e) => {
+    headerScore.addEventListener('click', (e) => {
         console.log("score button click!")
         const sorted = newData.sort((a, b) => a.high_score - b.high_score);
         //console.log(sorted);
