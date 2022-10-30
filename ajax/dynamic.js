@@ -15,21 +15,32 @@ $(document).ready(function () {
         }
     });
 
-    var order = "asc";
+    var order = "asc"; var sorted;
     headerName.addEventListener('click', (e) => {
         console.log("name button click!")
-        const sorted = order == "asc" ? newData.sort((a, b) => a.name.localeCompare(b.name)) : newData.sort((a, b) => b.name.localeCompare(a.name));
-        //console.log(sorted);
+        if (order == "asc") {
+            sorted = newData.sort((a, b) => a.name.localeCompare(b.name));
+            order = "dsc";
+        }
+        else {
+            sorted = newData.sort((a, b) => b.name.localeCompare(a.name));
+            order = "asc";
+        }
         renderDataInTheTable(sorted);
-        order = "dsc";
     })
 
 
     headerScore.addEventListener('click', (e) => {
         console.log("score button click!")
-        const sorted = newData.sort((a, b) => a.high_score - b.high_score);
-        //console.log(sorted);
-        renderDataInTheTable(sorted)
+        if (order == "asc") {
+            sorted = newData.sort((a, b) => a.high_score - b.high_score);
+            order = "dsc";
+        }
+        else {
+            sorted = newData.sort((a, b) => b.high_score - a.high_score);
+            order = "asc";
+        }
+        renderDataInTheTable(sorted);
     })
 
     function getData(data) {
