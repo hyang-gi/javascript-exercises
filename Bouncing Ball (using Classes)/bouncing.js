@@ -1,7 +1,4 @@
 $(document).ready(function () {
-	const canvas_style = $('.canvas');
-	const ball1_style = $('.ball1');
-	const ball2_style = $('.ball2');
 
 	class Canvas {
 		constructor(width, height, num_balls, id_canvas) {
