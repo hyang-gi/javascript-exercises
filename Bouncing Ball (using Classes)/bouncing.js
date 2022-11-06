@@ -23,11 +23,11 @@ $(document).ready(function () {
 		}
 
 		//method to add balls from no_balls
-		displayDivs() {
-			return this.createDiv();
+		displayBall() {
+			return this.createBall();
 		}
 		//for loop to create divs. 
-		createDiv() {
+		createBall() {
 			for (let i = 1; i <= this.num_balls; i++) {
 				$(`#${this.id_canvas}`).append(`<div class=ball${i}>.</div>`);
 			}
@@ -69,7 +69,7 @@ $(document).ready(function () {
 
 	console.log({ ball1, ball2, canvas });
 	canvas.createCanvas();
-	canvas.displayDivs();
+	canvas.displayBall();
 	//console.log(canvas.displayDivs());
 
 
