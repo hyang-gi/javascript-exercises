@@ -1,12 +1,26 @@
 $(document).ready(function () {
 	const canvas_style = $('.canvas');
+	const ball1_style = $('.ball1');
+	const ball2_style = $('.ball2');
 
 	class Canvas {
-		constructor(width, height, background, num_balls) {
+		constructor(width, height, num_balls, id_canvas) {
 			this.width = width;
 			this.height = height;
-			this.background = background;
 			this.num_balls = num_balls;
+			this.id_canvas = id_canvas;
+		}
+
+		createCanvas() {
+			$(`body`).append(`<div id=${this.id_canvas}></div>`);
+			const canvas = $(`#${this.id_canvas}`);
+			console.log("create", canvas);
+			canvas.css({
+				width: `${this.width}px`,
+				height: `${this.height}px`,
+				background: "red",
+				background: "rgb(2, 0, 18)",
+			});
 		}
 
 		//method to add balls from no_balls
@@ -16,10 +30,14 @@ $(document).ready(function () {
 		//for loop to create divs. 
 		createDiv() {
 			for (let i = 1; i <= this.num_balls; i++) {
-				$('.canvas').append(`<div class=ball_${i}>.</div>`);
+				$(`#${this.id_canvas}`).append(`<div class=ball${i}>.</div>`);
 			}
 		}
 	}
+
+
+	//created the divs - balls
+	// now, i want access the divs using the Ball class. set the values.
 
 	class Ball {
 		constructor(x, y, speed) {
@@ -46,19 +64,28 @@ $(document).ready(function () {
 		}
 	}
 
-	let canvas = new Canvas(600, 400, "rgb(2,0,18)", 2);
-	let ball_1 = new Ball(50, 30, 6);
-	let ball_2 = new Ball(300, 30, 8);
+	let canvas = new Canvas(600, 400, 2, "canvas1");
+	let ball1 = new Ball(50, 30, 6);
+	let ball2 = new Ball(300, 30, 8);
 
 	canvas_style.css({
-		width: `${canvas.width}px`,
-		height: `${canvas.height}px`,
-		background: `${canvas.background}`,
+
+	});
+
+	ball1_style.css({
+		left: `${ball1.x}px`,
+		top: `${ball1.y}px`,
+	});
+
+	ball2_style.css({
+		left: `${ball2.x}px`,
+		top: `${ball2.y}px`,
 	});
 
 
 
-	console.log({ ball_1, ball_2, canvas });
+	console.log({ ball1, ball2, canvas });
+	canvas.createCanvas();
 	canvas.displayDivs();
 	//console.log(canvas.displayDivs());
 
