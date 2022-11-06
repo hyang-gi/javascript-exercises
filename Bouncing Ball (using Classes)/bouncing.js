@@ -15,7 +15,7 @@ $(document).ready(function () {
 		}
 		//for loop to create divs. 
 		createDiv() {
-			for (let i = 0; i < this.num_balls; i++) {
+			for (let i = 1; i <= this.num_balls; i++) {
 				$('.canvas').append(`<div class=ball_${i}>.</div>`);
 			}
 		}
@@ -59,7 +59,8 @@ $(document).ready(function () {
 
 
 	console.log({ ball_1, ball_2, canvas });
-	console.log(canvas.displayDivs());
+	canvas.displayDivs();
+	//console.log(canvas.displayDivs());
 
 
 });
