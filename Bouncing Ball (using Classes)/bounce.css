@@ -4,7 +4,7 @@
 	background: rgb(2,0,18);
 	background: linear-gradient(180deg, rgba(2,0,18,1) 0%, rgba(0,17,168,1) 100%);
 } */
-.ball1{
+#ball1{
 	background: rgb(157,55,20);
 	background: radial-gradient(circle, rgba(157,55,20,1) 0%, rgba(168,0,0,1) 100%);
 	border-radius: 50%;
@@ -14,7 +14,7 @@
 	position: relative;
 }
 
-.ball2{
+#ball2{
 	background: yellow;
 	background: radial-gradient(circle, yellow 0%, yellow 100%);
 	border-radius: 50%;
