@@ -1,0 +1,26 @@
+.main{
+	width: 600px;
+	height: 400px;
+	background: rgb(2,0,18);
+	background: linear-gradient(180deg, rgba(2,0,18,1) 0%, rgba(0,17,168,1) 100%);
+}
+
+.ball{
+	background: rgb(157,55,20);
+	background: radial-gradient(circle, rgba(157,55,20,1) 0%, rgba(168,0,0,1) 100%);
+	border-radius: 50%;
+	border: 2px solid lightpink;
+	width: 40px;
+	height: 50px;
+	position: relative;
+}
+
+.ball1{
+	background: yellow;
+	background: radial-gradient(circle, yellow 0%, yellow 100%);
+	border-radius: 50%;
+	border: 2px solid green;
+	width: 40px;
+	height: 50px;
+	position: relative;
+}

@@ -16,14 +16,17 @@ $(document).ready(function () {
     });
 
     var order = "asc"; var sorted;
+    //var span = $("#name");
     headerName.addEventListener('click', (e) => {
         console.log("name button click!")
         if (order == "asc") {
             sorted = newData.sort((a, b) => a.name.localeCompare(b.name));
+           // span.toggleClass('fa-chevron-down fa-chevron-up');
             order = "dsc";
         }
         else {
             sorted = newData.sort((a, b) => b.name.localeCompare(a.name));
+         //   span.toggleClass('fa-chevron-up fa-chevron-down');
             order = "asc";
         }
         renderDataInTheTable(sorted);
@@ -34,10 +37,12 @@ $(document).ready(function () {
         console.log("score button click!")
         if (order == "asc") {
             sorted = newData.sort((a, b) => a.high_score - b.high_score);
+          //  span.toggleClass('fa-chevron-down fa-chevron-up');
             order = "dsc";
         }
         else {
             sorted = newData.sort((a, b) => b.high_score - a.high_score);
+          //  span.toggleClass('fa-chevron-up fa-chevron-down');
             order = "asc";
         }
         renderDataInTheTable(sorted);
