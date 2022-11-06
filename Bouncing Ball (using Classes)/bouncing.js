@@ -34,9 +34,8 @@ $(document).ready(function () {
 		}
 	}
 
-
-	//created the divs - balls
-	// now, i want access the divs using the Ball class. set the values.
+	// now, i want access the divs using the Ball class. set the style values.
+	// Ball class should have access to the div id in the Canvas class. 
 
 	class Ball {
 		constructor(x, y, speed) {
@@ -64,10 +63,8 @@ $(document).ready(function () {
 	}
 
 	let canvas = new Canvas(600, 400, 2, "canvas1");
-	let ball1 = new Ball(50, 30, 6);
-	let ball2 = new Ball(300, 30, 8);
 
-	console.log({ ball1, ball2, canvas });
+	console.log({ canvas });
 	canvas.createCanvas();
 	canvas.displayBall();
 	//console.log(canvas.displayDivs());
