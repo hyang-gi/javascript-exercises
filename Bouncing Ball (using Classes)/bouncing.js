@@ -18,7 +18,6 @@ $(document).ready(function () {
 			canvas.css({
 				width: `${this.width}px`,
 				height: `${this.height}px`,
-				background: "red",
 				background: "rgb(2, 0, 18)",
 			});
 		}
