@@ -67,22 +67,6 @@ $(document).ready(function () {
 	let ball1 = new Ball(50, 30, 6);
 	let ball2 = new Ball(300, 30, 8);
 
-	canvas_style.css({
-
-	});
-
-	ball1_style.css({
-		left: `${ball1.x}px`,
-		top: `${ball1.y}px`,
-	});
-
-	ball2_style.css({
-		left: `${ball2.x}px`,
-		top: `${ball2.y}px`,
-	});
-
-
-
 	console.log({ ball1, ball2, canvas });
 	canvas.createCanvas();
 	canvas.displayDivs();
