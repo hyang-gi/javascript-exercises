@@ -8,3 +8,4 @@ This repository is a track of all the Javascript assigments/exercises done durin
 4. [jQuery loading html files](https://github.com/hyang-gi/javascript-exercises/tree/main/Practice)
 5. [Ajax - Highscores Table](https://github.com/hyang-gi/javascript-exercises/tree/main/ajax)
 6. [Bouncing Ball using Classes](https://github.com/hyang-gi/javascript-exercises/tree/main/Bouncing%20Ball%20(using%20Classes))
+7. [Final Assessment] (https://github.com/hyang-gi/javascript-exercises/tree/main/Final)
