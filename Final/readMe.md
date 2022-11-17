@@ -1,9 +1,9 @@
 ## Assignment
 
-Have one computer-operated bat and one user-operated bat
-If the user or the computer misses a ball they get one point deducted from their total (start with 10 each)
-First one to 0 loses
-Show/keep track of the number of times the player won and the number of times the computer won 
+- Have one computer-operated bat and one user-operated bat
+- If the user or the computer misses a ball they get one point deducted - from their total (start with 10 each)
+- First one to 0 loses
+- Show/keep track of the number of times the player won and the number of - times the computer won 
 
 ## Additional Criteria
 
